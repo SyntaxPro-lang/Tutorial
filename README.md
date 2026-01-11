@@ -4,8 +4,9 @@
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
+local Tutorial = require(ReplicatedStorage.Tutorial)
+
 Players.PlayerAdded:Connect(function(player)
-	local Tutorial = require(ReplicatedStorage.Tutorial)
 	local newTutorial = Tutorial.Start(player)
 	
 	newTutorial:Objective(workspace.Test, "Go to the part")
